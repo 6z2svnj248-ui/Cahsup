@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CashUp — Gagne de l'argent</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080d1c;
+    color: white;
+}
+
+/* HEADER */
+
+header {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: #0d1428;
+    border-bottom: 1px solid #202a45;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: 900;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #aeb8d0;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* HERO */
+
+.hero {
+    max-width: 1150px;
+    margin: auto;
+    padding: 100px 6%;
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 9px 14px;
+    border: 1px solid #354263;
+    border-radius: 50px;
+    color: #bdc8e5;
+}
+
+h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+p {
+    color: #aeb8d0;
+    line-height: 1.7;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* BOUTONS */
+
+.btn,
+button {
+    border: 1px solid #354263;
+    border-radius: 12px;
+    padding: 14px 20px;
+    background: #171f37;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.btn:hover,
+button:hover {
+    transform: translateY(-2px);
+}
+
+.primary,
+button {
+    background: #635bff;
+    border-color: #635bff;
+}
+
+/* CARTES */
+
+.card,
+article {
+    background: #111a30;
+    border: 1px solid #273452;
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: 0 15px 50px rgba(0,0,0,.25);
+}
+
+.balance strong {
+    display: block;
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.balance small,
+.balance span {
+    color: #8995b0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #273452;
+}
+
+/* SECTIONS */
+
+section > h2 {
+    max-width: 1150px;
+    margin: 50px auto 10px;
+    padding: 0 6%;
+}
+
+.grid {
+    max-width: 1150px;
+    margin: auto;
+    padding: 20px 6% 80px;
+    display: grid;
+    gap: 18px;
+}
+
+.three {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.offer span {
+    font-size: 35px;
+}
+
+.offer button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.offer button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+/* SECURITE */
+
+.security {
+    max-width: 1150px;
+    margin: 0 auto 70px;
+    padding: 35px;
+    background: #111a30;
+    border: 1px solid #273452;
+    border-radius: 22px;
+}
+
+.security h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 35px;
+    color: #69748e;
+    border-top: 1px solid #202a45;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+    }
+
+    .three {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="#" class="logo">
+        CashUp
+    </a>
+
+    <nav>
+        <a href="#comment">Comment ça marche</a>
+        <a href="#offres">Offres</a>
+        <a href="#securite">Sécurité</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+<!-- ACCUEIL -->
+
+<section class="hero">
+
+    <div>
+
+        <span class="badge">
+            💸 Plateforme indépendante
+        </span>
+
+        <h1>
+            Transforme tes compétences en revenus.
+        </h1>
+
+        <p>
+            CashUp permet de découvrir des offres,
+            services et récompenses dans une
+            interface simple et moderne.
+        </p>
+
+        <div class="actions">
+
+            <a
+                href="#offres"
+                class="btn primary"
+            >
+                Découvrir les offres
+            </a>
+
+            <a
+                href="#comment"
+                class="btn"
+            >
+                Comment ça marche ?
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="card balance">
+
+        <small>
+            APERÇU DU COMPTE
+        </small>
+
+        <strong>
+            0,00 €
+        </strong>
+
+        <span>
+            Solde disponible
+        </span>
+
+        <hr>
+
+        <div class="row">
+            <span>Points</span>
+            <b>0</b>
+        </div>
+
+        <div class="row">
+            <span>Transactions</span>
+            <b>0</b>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COMMENT CA MARCHE -->
+
+<section id="comment">
+
+<h2>
+    Comment ça marche ?
+</h2>
+
+<div class="grid three">
+
+    <article>
+
+        <b>01</b>
+
+        <h3>
+            Choisis
+        </h3>
+
+        <p>
+            Découvre les offres et services
+            disponibles sur CashUp.
+        </p>
+
+    </article>
+
+
+    <article>
+
+        <b>02</b>
+
+        <h3>
+            Participe
+        </h3>
+
+        <p>
+            Réalise les actions proposées
+            en respectant leurs conditions.
+        </p>
+
+    </article>
+
+
+    <article>
+
+        <b>03</b>
+
+        <h3>
+            Gagne
+        </h3>
+
+        <p>
+            Les gains et paiements sont
+            traités selon les règles applicables.
+        </p>
+
+    </article>
+
+</div>
+
+</section>
+
+
+<!-- OFFRES -->
+
+<section id="offres">
+
+<h2>
+    Offres de lancement
+</h2>
+
+<div class="grid three">
+
+
+<article class="offer">
+
+    <span>🛠️</span>
+
+    <h3>
+        Services numériques
+    </h3>
+
+    <p>
+        Découvre des services numériques
+        proposés sur la plateforme.
+    </p>
+
+    <button onclick="paiementDemo(5)">
+        Tester · 5 €
+    </button>
+
+</article>
+
+
+<article class="offer">
+
+    <span>🎁</span>
+
+    <h3>
+        Récompenses
+    </h3>
+
+    <p>
+        Un espace dédié aux futures
+        récompenses disponibles.
+    </p>
+
+    <button disabled>
+        Bientôt disponible
+    </button>
+
+</article>
+
+
+<article class="offer">
+
+    <span>⭐</span>
+
+    <h3>
+        Premium
+    </h3>
+
+    <p>
+        Une formule optionnelle avec
+        des avantages clairement définis.
+    </p>
+
+    <button onclick="paiementDemo(2.99)">
+        Tester · 2,99 €
+    </button>
+
+</article>
+
+
+</div>
+
+</section>
+
+
+<!-- SECURITE -->
+
+<section
+    id="securite"
+    class="security"
+>
+
+    <h2>
+        🔐 Paiements sécurisés
+    </h2>
+
+    <p>
+        Les paiements réels devront être
+        traités par un prestataire de paiement
+        comme Stripe. CashUp ne doit jamais
+        stocker les numéros de carte bancaire.
+    </p>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    © 2026 CashUp · Tous droits réservés
+
+</footer>
+
+
+<script>
+
+function paiementDemo(montant) {
+
+    alert(
+        "Paiement de " +
+        montant.toFixed(2) +
+        " €\n\n" +
+        "Le paiement Stripe sera activé " +
+        "lorsque le serveur sécurisé sera configuré."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
